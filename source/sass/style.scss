@@ -1,1 +1,45 @@
-body { background: red; }
+@import "normalize";
+@import "variables.scss";
+@import "mixins.scss";
+
+// шрифты
+@font-face {
+  font-family: $main-font;
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open Sans"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: $main-font;
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Open Sans Bold"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/sprite.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/search.scss";
