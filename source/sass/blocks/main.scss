@@ -1,0 +1,140 @@
+.main {
+}
+
+.main__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 176px;
+  margin: 0;
+
+  @include font-name;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #000000;
+
+  background-color: #f1f1f1;
+}
+
+.main__catalog {
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-right: $mobile-padding;
+  padding-bottom: 20px;
+  padding-left: $mobile-padding;
+}
+
+.main__catalog-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main__catalog-item {
+
+}
+
+.main__production {
+  margin-right: $mobile-padding;
+  margin-bottom: 55px;
+  margin-left: $mobile-padding;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .main__title {
+    position: relative;
+    z-index: -1;
+
+    min-height: 239px;
+    margin-top: -60px;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      width: 100%;
+      height: 27px;
+
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 34px;
+    }
+  }
+
+  .main__catalog {
+    margin-bottom: 29px;
+    padding-top: 65px;
+    padding-right: $tablet-padding;
+    padding-bottom: 20px;
+    padding-left: $tablet-padding;
+  }
+
+  .main__production {
+    margin-right: $tablet-padding;
+    margin-bottom: 55px;
+    margin-left: $tablet-padding;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__title {
+    position: relative;
+    z-index: -1;
+
+    min-height: 245px;
+    margin-top: -63px;
+
+    font-size: 53px;
+    line-height: 57px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+
+      width: 100%;
+      height: 30px;
+
+      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 34px;
+    }
+  }
+
+  .main__catalog {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding-top: 135px;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
+    width: 1150px;
+  }
+
+  .main__catalog-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .main__catalog-item {
+  }
+
+  .main__production {
+    width: 1050px;
+    margin: 0 auto;
+    //margin-right: $desktop-padding;
+    margin-bottom: 105px;
+    //margin-left: $desktop-padding;
+  }
+}

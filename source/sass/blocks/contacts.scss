@@ -1,0 +1,273 @@
+.contacts {
+  position: relative;
+
+  padding-top: 35px;
+  padding-right: $mobile-padding;
+  padding-bottom: 37px;
+  padding-left: $mobile-padding;
+
+  @include font-name;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-size: 18px;
+}
+
+.contacts__list {
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.contacts__inner {
+  display: flex;
+  margin-bottom: 29px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.contacts__item-title {
+  width: 78px;
+  padding-right: 10px;
+
+  letter-spacing: 0.7px;
+}
+
+.contacts__item-desc {
+  margin: 0;
+
+  letter-spacing: -0.2px;
+}
+
+.contacts__mail-link {
+  padding-bottom: 2px;
+
+  text-decoration: none;
+  color: inherit;
+
+  border-bottom: 1px solid $tiffany-color-5;
+
+  &:hover,
+  &:focus {
+    color: $tiffany-color-4;
+    border-color: $tiffany-color-4;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__map {
+  position: relative;
+
+  height: 457px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 50%;
+
+    width: 67px;
+    height: 100px;
+    margin-top: -83px;
+    margin-right: -44px;
+
+    background-image: url("../../img/map-pin.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts__map-image {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  min-width: 322px;
+  height: 457px;
+  margin-left: -161px;
+}
+
+.contacts__iframe {
+  position: absolute;
+  z-index: 2;
+  left: -$mobile-padding;
+
+  width: calc(100% + 100px);
+}
+
+.contacts__write-us-button {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .contacts {
+    padding-top: 60px;
+    padding-right: $tablet-padding;
+    padding-bottom: 56px;
+    padding-left: $tablet-padding;
+
+    font-size: 17px;
+
+    background-image: url("../../img/flag.svg");
+    background-position: right $tablet-padding + 2px top 46px;
+    background-repeat: no-repeat;
+    background-size: 47px 81px;
+  }
+
+  .contacts__title {
+    margin-bottom: 50px;
+    margin-left: -5px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__list {
+    display: flex;
+
+    margin-bottom: 55px;
+  }
+
+  .contacts__inner {
+    display: flex;
+    width: 50%;
+    margin-bottom: 35px;
+  }
+
+  .contacts__mail-link {
+  }
+
+  .contacts__map {
+    margin-bottom: 55px;
+
+    &::before {
+      margin-top: -88px;
+      margin-right: -46px;
+    }
+  }
+
+  .contacts__map-image {
+    min-width: 768px;
+
+    margin-left: -384px;
+  }
+
+  .contacts__iframe {
+    left: -$tablet-padding;
+  }
+
+  .contacts__write-us-button {
+    display: block;
+    width: 230px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin-left: 175px;
+    padding-top: 147px;
+    padding-right: $desktop-padding;
+    padding-bottom: 103px;
+    padding-left: $desktop-padding;
+
+    font-size: 17px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 138px;
+      left: -63px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../../img/flag.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 47px 81px;
+    }
+  }
+
+  .contacts__title {
+    width: 350px;
+    margin-bottom: 50px;
+    margin-left: -5px;
+    padding-right: 30px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts__list {
+    width: 350px;
+    margin-bottom: 80px;
+    padding-right: 30px;
+  }
+
+  .contacts__inner {
+    margin-bottom: 30px;
+  }
+
+  .contacts__item-title {
+    letter-spacing: 0.1px;
+  }
+
+  .contacts__item-desc {
+
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 78px;
+    right: $desktop-padding;
+
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 350px - 100px);
+    height: 457px;
+    margin-bottom: 35px;
+
+    &::before {
+      right: 262px;
+    }
+  }
+
+  .contacts__map-image {
+    position: static;
+
+    width: 525px;
+    margin: 0;
+  }
+
+  .contacts__iframe {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+
+    width: 100%;
+    margin: 0;
+  }
+
+  .contacts__write-us-button {
+    width: 230px;
+  }
+}

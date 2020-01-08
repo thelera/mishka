@@ -2,12 +2,12 @@
   position: relative;
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   padding-top: 22px;
 
   @include font-name;
+  font-size: 17px;
   font-weight: 700;
   line-height: 25px;
   color: #000000;
@@ -29,10 +29,9 @@
     .menu__list {
       display: block;
 
-      margin: 0;
-      padding: 0;
-
-      list-style: none;
+      &--small {
+        display: none;
+      }
     }
 
     .menu__search {
@@ -45,29 +44,29 @@
   }
 }
 
-.menu__logo-wrapper {
-  width: 75%;
-  margin-bottom: 22px;
-}
-
 .menu__logo {
   display: block;
   width: 86px;
   height: 35px;
-  margin-left: 48%;
-}
-
-.menu__toggle-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  width: 25%;
   margin-bottom: 22px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .menu__toggle {
+  position: absolute;
+
   width: 20px;
   height: 20px;
-  margin-right: $mobile-padding;
+  top: 29px;
+  right: $mobile-padding;
   padding: 0;
 
   background-image: url("../../img/menu-closed.svg");
@@ -75,20 +74,34 @@
   background-position: center;
   background-size: 20px 14px;
   border: none;
+
+  cursor: pointer;
 }
 
 .menu__list {
   display: none;
-
   width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .menu__item {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 25px;
+  padding-bottom: 29px;
   padding-left: 76px;
 
-  box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .menu__link {
@@ -98,11 +111,308 @@
 
 .menu__search {
   display: none;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: $mobile-padding + 2px;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+
+  &::after {
+    content: "Поиск по сайту";
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(#000000, 0.6);
+
+    .menu__search-icon {
+      fill: $tiffany-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu__search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 21px;
+
+  fill: rgba(#000000, 0.2);
 }
 
 .menu__basket {
   display: none;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  padding-left: $mobile-padding;
 
   text-decoration: none;
   color: inherit;
+
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+
+  &::after {
+    content: "Корзина: пока пуста";
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(#000000, 0.6);
+
+    .menu__basket-icon {
+      fill: $tiffany-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu__basket-icon {
+  margin-right: 23px;
+
+  fill: rgba(#000000, 0.2);
+}
+
+.menu__delivery {
+  display: none;
+
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+
+    font-size: 15px;
+  }
+
+  .menu__logo {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+    margin: 0;
+    margin-right: auto;
+    margin-left: $tablet-padding;
+  }
+
+  .menu__icon {
+    width: 113px;
+    height: 46px;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+
+  .menu__list {
+    order: 4;
+    display: flex;
+    width: 50%;
+    margin-left: $tablet-padding;
+
+    &--small {
+      display: none;
+    }
+  }
+
+  .menu__item {
+    padding: 0;
+    padding-top: 18px;
+    padding-right: 35px;
+    padding-bottom: 18px;
+    padding-left: 0;
+
+    box-shadow: none;
+  }
+
+  .menu__search {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    min-height: 88px;
+    margin: 0;
+    padding: 0;
+
+    box-shadow: none;
+    border-right: 1px solid rgba(#000000, 0.1);
+    border-left: 1px solid rgba(#000000, 0.1);
+
+    &::after {
+      content: "";
+    }
+  }
+
+  .menu__search-icon {
+    margin: 0;
+  }
+
+  .menu__basket {
+    order: 3;
+    display: block;
+    width: 265px;
+    margin-right: $tablet-padding;
+    padding: 0;
+    padding-left: 31px;
+
+    font-size: 17px;
+
+    box-shadow: none;
+  }
+
+  .menu__basket-icon {
+    margin-right: 31px;
+  }
+
+  .menu__delivery {
+    order: 5;
+    display: block;
+    width: auto;
+    margin-right: $tablet-padding;
+    margin-left: auto;
+    padding-left: 15px;
+
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .menu__logo {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+
+    order: 2;
+    width: 149px;
+    height: 72px;
+    margin-left: -74px;
+  }
+
+  .menu__icon {
+    width: 149px;
+    height: 72px;
+  }
+
+  .menu__toggle {
+    display: none;
+  }
+
+  .menu__list {
+    order: 1;
+    display: flex;
+    width: 40%;
+    margin-right: auto;
+    margin-left: $tablet-padding;
+
+    &--small {
+      order: 5;
+      width: 60%;
+      display: flex;
+
+      font-size: 15px;
+
+      .menu__item {
+        width: 185px;
+        padding-top: 18px;
+        padding-bottom: 22px;
+
+        letter-spacing: 0.1px;
+      }
+    }
+  }
+
+  .menu__item {
+    padding-top: 29px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+
+    box-shadow: none;
+
+    &--border {
+      width: 185px;
+
+      border-right: 1px solid rgba(#000000, 0.1);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .menu__search {
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    min-height: 88px;
+    margin-left: auto;
+    padding: 0;
+
+    box-shadow: none;
+    border-right: 1px solid rgba(#000000, 0.1);
+    border-left: 1px solid rgba(#000000, 0.1);
+
+    &::after {
+      content: "";
+    }
+  }
+
+  .menu__search-icon {
+    margin: 0;
+  }
+
+  .menu__basket {
+    order: 4;
+    display: block;
+    width: 267px;
+    margin-right: $tablet-padding;
+    padding: 0;
+    padding-left: 31px;
+
+    box-shadow: none;
+  }
+
+  .menu__basket-icon {
+    margin-right: 32px;
+  }
+
+  .menu__delivery {
+    order: 5;
+    display: block;
+    width: auto;
+    margin-top: -5px;
+    margin-right: $tablet-padding;
+    margin-left: auto;
+    padding-left: 15px;
+
+    font-size: 15px;
+    text-align: right;
+  }
 }
