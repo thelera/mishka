@@ -79,10 +79,10 @@
       <h2 class="visually-hidden">Форма для заказа вязаных изделий</h2>
 
       <p class="main__form-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      
+
       <form class="main__form form" action="https://echo.htmlacademy.ru" method="POST">
         <!-- Тип -->
-        <div class="form__fieldset">
+        <div class="form__fieldset form__fieldset--type">
           <p class="form__legend">Тип</p>
 
           <div class="form__field-wrapper">
@@ -90,7 +90,7 @@
               <input class="form__input visually-hidden" type="radio" name="type" id="interior-type" value="interior">
               <label class="form__label form__label--radio" for="interior-type">Аксессуар для интерьера</label>
             </div>
-          
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="radio" name="type" id="toy-type" value="toy" checked>
               <label class="form__label form__label--radio" for="toy-type">Детская игрушка</label>
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Цвет -->
-        <div class="form__fieldset form__fieldset--color-grey">
+        <div class="form__fieldset form__fieldset--color form__fieldset--color-grey">
           <p class="form__legend">Цвет</p>
 
           <div class="form__field-wrapper">
@@ -107,27 +107,27 @@
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-white" value="color-white" checked>
               <label class="form__label form__label--checkbox" for="color-white">Белый</label>
             </div>
-            
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-grey" value="color-grey" checked>
               <label class="form__label form__label--checkbox" for="color-grey">Серый</label>
             </div>
-            
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-tiffany" value="color-tiffany">
               <label class="form__label form__label--checkbox" for="color-tiffany">«Тиффани»</label>
             </div>
-            
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-black" value="color-black">
               <label class="form__label form__label--checkbox" for="color-black">Черный</label>
             </div>
-            
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-pink" value="color-pink">
               <label class="form__label form__label--checkbox" for="color-pink">Розовый</label>
             </div>
-            
+
             <div class="form__inner">
               <input class="form__input visually-hidden" type="checkbox" name="color" id="color-orange" value="color-orange">
               <label class="form__label form__label--checkbox" for="color-orange">Оранжевый</label>
@@ -136,7 +136,7 @@
         </div>
 
         <!-- ФИО -->
-        <div class="form__fieldset">
+        <div class="form__fieldset form__fieldset--fio">
           <p class="form__legend">ФИО</p>
 
           <div class="form__field-wrapper form__field-wrapper--fio">
@@ -144,12 +144,12 @@
               <label class="form__label form__label--fio" for="name">Имя:</label>
               <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </div>
-            
+
             <div class="form__inner form__inner--fio">
               <label class="form__label form__label--fio" for="surname">Фамилия:</label>
               <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
             </div>
-            
+
             <div class="form__inner form__inner--fio">
               <label class="form__label form__label--fio" for="middle-name">Отчество:</label>
               <input class="form__input" type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
@@ -158,29 +158,36 @@
         </div>
 
         <!-- Тел -->
-        <div class="form__fieldset form__fieldset--color-grey">
+        <div class="form__fieldset form__fieldset--tel form__fieldset--color-grey">
           <p class="form__legend">ТЕЛ</p>
 
-          <input class="form__input" type="text" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
-          <svg class="form__input-icon" width="25" height="25">
-            <use xlink:href="#icon-phone"></use>
-          </svg>
+          <div class="form__field-wrapper">
+            <label class="visually-hidden" for="tel">Телефон:</label>
+            <input class="form__input" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
+            <svg class="form__input-icon" width="25" height="25">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+          </div>
         </div>
 
         <!-- E-mail -->
-        <div class="form__fieldset form__fieldset--color-grey">
+        <div class="form__fieldset form__fieldset--email form__fieldset--color-grey">
           <p class="form__legend">E-MAIL</p>
 
-          <input class="form__input" type="text" name="email" id="email" placeholder="Ваш Email*" required>
-          <svg class="form__input-icon" width="32" height="32">
-            <use xlink:href="#icon-mail"></use>
-          </svg>
+          <div class="form__field-wrapper">
+            <label class="visually-hidden" for="email">Email:</label>
+            <input class="form__input" type="email" name="email" id="email" placeholder="Ваш Email*" required>
+            <svg class="form__input-icon" width="32" height="32">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
+          </div>
         </div>
 
         <!-- Доп -->
-        <div class="form__fieldset">
+        <div class="form__fieldset form__fieldset--more">
           <p class="form__legend">ДОП</p>
 
+          <label class="visually-hidden" for="text">Опишите все ваши пожелания к заказу</label>
           <textarea class="form__textarea" name="text" id="text" placeholder="Опишите все ваши пожелания к заказу" required></textarea>
         </div>
 
@@ -234,5 +241,4 @@
 
   <script src="js/script.min.js"></script>
 </body>
-
 </html>

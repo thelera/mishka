@@ -23,10 +23,6 @@
   display: none;
 }
 
-.footer__image {
-
-}
-
 .footer__socials {
   margin-bottom: 25px;
 }
@@ -120,12 +116,6 @@
 
     border: none;
   }
-
-  .footer__copyright-link {
-  }
-
-  .footer__copyright-image {
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -177,11 +167,5 @@
     padding-top: 12px;
 
     border: none;
-  }
-
-  .footer__copyright-link {
-  }
-
-  .footer__copyright-image {
   }
 }

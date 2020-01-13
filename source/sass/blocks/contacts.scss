@@ -86,7 +86,7 @@
     margin-top: -83px;
     margin-right: -44px;
 
-    background-image: url("../../img/map-pin.svg");
+    background-image: url("../img/map-pin.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
   }
@@ -124,7 +124,7 @@
 
     font-size: 17px;
 
-    background-image: url("../../img/flag.svg");
+    background-image: url("../img/flag.svg");
     background-position: right $tablet-padding + 2px top 46px;
     background-repeat: no-repeat;
     background-size: 47px 81px;
@@ -148,9 +148,6 @@
     display: flex;
     width: 50%;
     margin-bottom: 35px;
-  }
-
-  .contacts__mail-link {
   }
 
   .contacts__map {
@@ -200,7 +197,7 @@
       width: 47px;
       height: 81px;
 
-      background-image: url("../../img/flag.svg");
+      background-image: url("../img/flag.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
       background-size: 47px 81px;
@@ -229,10 +226,6 @@
 
   .contacts__item-title {
     letter-spacing: 0.1px;
-  }
-
-  .contacts__item-desc {
-
   }
 
   .contacts__map {

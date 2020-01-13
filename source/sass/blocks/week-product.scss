@@ -24,7 +24,7 @@
     width: 100%;
     height: 6px;
 
-    background-image: url("../../img/bg-zigzag-line.svg");
+    background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat;
     background-size: 100% 6px;
   }
@@ -62,7 +62,7 @@
   padding-top: 8px;
   padding-bottom: 8px;
 
-  border-bottom: 1px solid #ececec
+  border-bottom: 1px solid #ececec;
 }
 
 .week-product__item-info {
@@ -89,10 +89,6 @@
   font-weight: 700;
 }
 
-.week-product__buy-button {
-
-}
-
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .week-product {
     flex-direction: row;
@@ -116,7 +112,7 @@
       width: 100%;
       height: 24px;
 
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-size: 100% 24px;
     }
@@ -168,14 +164,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    border-bottom: 1px solid #ececec
+    border-bottom: 1px solid #ececec;
   }
 
   .week-product__item-info {
     width: 98px;
-  }
-
-  .week-product__item-desc {
   }
 
   .week-product__image {
@@ -226,7 +219,7 @@
       width: 100%;
       height: 34px;
 
-      background-image: url("../../img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-size: 100% 34px;
     }
@@ -281,14 +274,11 @@
     padding-top: 10px;
     padding-bottom: 10px;
 
-    border-bottom: 1px solid #ececec
+    border-bottom: 1px solid #ececec;
   }
 
   .week-product__item-info {
     width: 98px;
-  }
-
-  .week-product__item-desc {
   }
 
   .week-product__image {
