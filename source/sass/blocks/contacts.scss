@@ -1,16 +1,18 @@
 .contacts {
+  @include font-name;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000000;
+}
+
+.contacts__inner {
   position: relative;
 
   padding-top: 35px;
   padding-right: $mobile-padding;
   padding-bottom: 37px;
   padding-left: $mobile-padding;
-
-  @include font-name;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
-  color: #000000;
 }
 
 .contacts__title {
@@ -25,7 +27,7 @@
   margin-bottom: 36px;
 }
 
-.contacts__inner {
+.contacts__list-inner {
   display: flex;
   margin-bottom: 29px;
 
@@ -107,7 +109,7 @@
   z-index: 2;
   left: -$mobile-padding;
 
-  width: calc(100% + 100px);
+  width: calc(100% + 60px);
 }
 
 .contacts__write-us-button {
@@ -117,12 +119,14 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .contacts {
+    font-size: 17px;
+  }
+
+  .contacts__inner {
     padding-top: 60px;
     padding-right: $tablet-padding;
     padding-bottom: 56px;
     padding-left: $tablet-padding;
-
-    font-size: 17px;
 
     background-image: url("../img/flag.svg");
     background-position: right $tablet-padding + 2px top 46px;
@@ -144,7 +148,7 @@
     margin-bottom: 55px;
   }
 
-  .contacts__inner {
+  .contacts__list-inner {
     display: flex;
     width: 50%;
     margin-bottom: 35px;
@@ -167,6 +171,8 @@
 
   .contacts__iframe {
     left: -$tablet-padding;
+
+    width: calc(100% + 100px);
   }
 
   .contacts__write-us-button {
@@ -179,20 +185,23 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    margin-left: 175px;
+    font-size: 17px;
+  }
+
+  .contacts__inner {
+    position: relative;
+
     padding-top: 147px;
     padding-right: $desktop-padding;
     padding-bottom: 103px;
-    padding-left: $desktop-padding;
-
-    font-size: 17px;
+    padding-left: 224px;
 
     &::before {
       content: "";
 
       position: absolute;
       top: 138px;
-      left: -63px;
+      left: 113px;
 
       width: 47px;
       height: 81px;
@@ -220,7 +229,7 @@
     padding-right: 30px;
   }
 
-  .contacts__inner {
+  .contacts__list-inner {
     margin-bottom: 30px;
   }
 
@@ -235,7 +244,7 @@
 
     display: flex;
     justify-content: flex-end;
-    width: calc(100% - 350px - 100px);
+    width: 525px;
     height: 457px;
     margin-bottom: 35px;
 
@@ -256,7 +265,7 @@
     z-index: 2;
     left: 0;
 
-    width: 100%;
+    width: 525px;
     margin: 0;
   }
 

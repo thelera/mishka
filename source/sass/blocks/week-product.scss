@@ -1,13 +1,6 @@
 .week-product {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  padding-top: 28px;
-  padding-right: $mobile-padding;
-  padding-bottom: 45px;
-  padding-left: $mobile-padding;
-
   @include font-name;
   font-size: 15px;
   font-weight: 400;
@@ -28,6 +21,17 @@
     background-repeat: no-repeat;
     background-size: 100% 6px;
   }
+}
+
+.week-product__inner {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+  padding-right: $mobile-padding;
+  padding-bottom: 45px;
+  padding-left: $mobile-padding;
 }
 
 .week-product__title {
@@ -57,7 +61,7 @@
   margin-bottom: 28px;
 }
 
-.week-product__inner {
+.week-product__info-inner {
   display: flex;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -91,14 +95,6 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .week-product {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 30px;
-    padding-right: $tablet-padding;
-    padding-bottom: 69px;
-    padding-left: $tablet-padding;
-
     font-size: 17px;
     line-height: 30px;
 
@@ -122,6 +118,16 @@
 
       background-size: 100% 17px;
     }
+  }
+
+  .week-product__inner {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-right: $tablet-padding;
+    padding-bottom: 69px;
+    padding-left: $tablet-padding;
   }
 
   .week-product__title {
@@ -159,7 +165,7 @@
     line-height: 20px;
   }
 
-  .week-product__inner {
+  .week-product__info-inner {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -198,14 +204,6 @@
 
 @media (min-width: $desktop-width) {
   .week-product {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 110px;
-    padding-right: $tablet-padding;
-    padding-bottom: 98px;
-    padding-left: $tablet-padding;
-
     font-size: 17px;
     line-height: 30px;
 
@@ -229,6 +227,19 @@
 
       background-size: 100% 23px;
     }
+  }
+
+  .week-product__inner {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 110px;
+    padding-right: $desktop-padding;
+    padding-bottom: 98px;
+    padding-left: $desktop-padding;
   }
 
   .week-product__title {
@@ -269,7 +280,7 @@
     line-height: 20px;
   }
 
-  .week-product__inner {
+  .week-product__info-inner {
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;

@@ -30,37 +30,37 @@
   background-position: 0 0;
   background-repeat: no-repeat;
 
-  &:first-child {
+  &--fabric {
     background-image: url("../img/feature-flower.svg");
     background-position: 6px 0;
     background-size: 32px 37px;
   }
 
-  &:nth-child(2) {
+  &--style {
     background-image: url("../img/feature-money.svg");
     background-position: 0 2px;
     background-size: 47px 27px;
   }
 
-  &:nth-child(3) {
+  &--likes {
     background-image: url("../img/feature-heart.svg");
     background-position: 7px 10px;
     background-size: 34px 27px;
   }
 
-  &:nth-child(4) {
+  &--handiwork {
     background-image: url("../img/feature-ball.svg");
     background-position: 3px 7px;
     background-size: 35px 34px;
   }
 
-  &:nth-child(5) {
+  &--local {
     background-image: url("../img/feature-rocket.svg");
     background-position: -5px 10px;
     background-size: 55px 23px;
   }
 
-  &:nth-child(6) {
+  &--present {
     background-image: url("../img/feature-gift.svg");
     background-position: 3px 8px;
     background-size: 33px 32px;
@@ -98,31 +98,31 @@
     background-position: 0 0;
     background-repeat: no-repeat;
 
-    &:first-child {
+    &--fabric {
       order: 1;
 
       background-position: 10px 5px;
     }
 
-    &:nth-child(2) {
+    &--style {
       order: 3;
 
       background-position: 0 4px;
     }
 
-    &:nth-child(3) {
+    &--likes {
       order: 5;
     }
 
-    &:nth-child(4) {
+    &--handiwork {
       order: 2;
     }
 
-    &:nth-child(5) {
+    &--local {
       order: 4;
     }
 
-    &:nth-child(6) {
+    &--present {
       order: 6;
     }
   }
@@ -159,31 +159,31 @@
     background-position: 0 0;
     background-repeat: no-repeat;
 
-    &:first-child {
+    &--fabric {
       order: 1;
 
       background-position: 10px 5px;
     }
 
-    &:nth-child(2) {
+    &--style {
       order: 3;
     }
 
-    &:nth-child(3) {
+    &--likes {
       order: 5;
     }
 
-    &:nth-child(4) {
+    &--handiwork {
       order: 2;
     }
 
-    &:nth-child(5) {
+    &--local {
       order: 4;
 
       background-position: 0 5px;
     }
 
-    &:nth-child(6) {
+    &--present {
       order: 6;
 
       background-position: 3px 5px;
