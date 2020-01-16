@@ -26,6 +26,9 @@
 }
 
 .footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 25px;
 }
 
@@ -102,10 +105,10 @@
     position: absolute;
     left: 50%;
 
-    width: 150px;
+    width: 300px;
     margin: 0;
     margin-top: 7px;
-    margin-left: -75px;
+    margin-left: -150px;
   }
 
   .footer__copyright {
@@ -155,10 +158,10 @@
     position: absolute;
     left: 50%;
 
-    width: 150px;
+    width: 300px;
     margin: 0;
     margin-top: 7px;
-    margin-left: -75px;
+    margin-left: -150px;
   }
 
   .footer__copyright {
